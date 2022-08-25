@@ -1,0 +1,110 @@
+*{box-sizing: border-box;}
+body{height: 95vh;}
+main{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 100vh;
+}
+/*------------------------------------------------------
+//    LEFT PART
+//------------------------------------------------------*/
+#left_third{
+
+  background-image: url("https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1862&q=80");
+  display:grid;
+  height: 95vh;
+  grid-template-rows: repeat(8, 1fr);
+  background-size:     cover;                  
+  background-repeat:   no-repeat;
+  background-position: center center;  
+}
+#logo_part{
+  background-color: rgba(20,20,20,0.6);
+  display: flex; flex-flow: row nowrap; justify-content: space-around ; align-items: center;
+  padding: 3vh 7vw;
+  font-size: 10vh;
+  color: white;
+  grid-row: 3/4;
+}
+#logo_part img{width: 30%;}
+#leaves_img{
+  grid-column: 1 / 2;
+}
+/*------------------------------------------------------
+//    RIGHT PART
+//------------------------------------------------------*/
+#right_thirds{
+  display: grid; grid-template-rows: 1fr 1fr 4fr 1fr;}
+#intro_section{grid-row: 2/3};
+#form_section{grid-row: 3/4);
+box-shadow: 0 4px 2px -2px gray;}
+#sub_section{
+  display: grid;
+  grid-template: 2fr / 2fr;
+}
+/*------------------------------------------------------
+//    FIELDS PART
+//------------------------------------------------------*/
+#fields_part{
+  display: grid; grid-template: repeat(3,1fr) / 1fr 1fr; gap: 10px; padding: 10px 2vw;
+}
+.t_field{ display: grid; grid-template: 1fr 1fr / 1fr;}
+/*------------------------------------------------------*/
+/*------------------------------------------------------
+//    @media
+//------------------------------------------------------*/
+@media only screen and (max-width: 650px) {
+  main{
+    display: grid;
+    grid-template-rows: 15vh 80vh;
+    grid-template-columns: 1fr;
+    top-margin: 0px;
+  }
+  #left_third{
+    grid-row: 1 ;
+    height: 14vh;
+  }
+  #right_thirds{
+    grid-row:2;
+    grid-template-rows: 1fr 4fr;
+  }
+  #logo_part{height: 14vh;}
+  #logo_part img{height: 12vh; width: auto;}
+  #intro_section{grid-row: 1 / span 1}
+  #form_section{grid-row: 2 / span 1}
+}
+@media only screen and (max-width: 410px){
+  #fields_part{
+    grid-template-columns: 1fr;
+  }
+}
+/*------------------------------------------------------
+//    REST
+//------------------------------------------------------*/
+h3, p{padding: 0.5vh 1vw; margin: 0.2rem;}
+input{border: 2px solid grey; border-radius:0.5vw;}
+input:focus { 
+  outline: none !important;
+  border-color: RoyalBlue;
+  box-shadow: 0 0 5px RoyalBlue;
+}
+textarea:focus { 
+  outline: none !important;
+  border-color: RoyalBlue;
+  box-shadow: 0 0 5px RoyalBlue;
+}
+button{
+    border: 5px solid rgba(1,1,1,0);
+  border-radius: 1vw;
+  width: 12rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  color:white;
+  background-color: DarkOliveGreen;
+  margin:2vw;
+}
+button:hover{
+    background-color: DarkOliveGreen;
+    border: 5px solid OliveDrab;
+    box-shadow: 2px 5px 5px OliveDrab;
+}
